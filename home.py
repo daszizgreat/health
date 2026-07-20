@@ -216,7 +216,7 @@ st.markdown('<div class="dash-sub">Weight · Sleep · Steps · Mood · Workout l
 
 pg = st.navigation([
     st.Page("app.py", title="Home"),
-    st.Page("pages/home.py", title="Dashboard")
+    st.Page("home.py", title="Dashboard")
 ])
 pg.run()
 

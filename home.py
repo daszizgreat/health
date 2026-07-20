@@ -216,7 +216,7 @@ st.markdown('<div class="dash-sub">Weight · Sleep · Steps · Mood · Workout l
 
 
 if st.button("🏠 Back to Home"):
-    st.switch_page("app.py")
+    st.page_link("app.py")
 
 # ============================================================
 # COUNTDOWN — TRAVEL DATE

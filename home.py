@@ -214,7 +214,11 @@ if not df.empty:
 st.markdown('<div class="dash-title">📊 Fitness Dashboard</div>', unsafe_allow_html=True)
 st.markdown('<div class="dash-sub">Weight · Sleep · Steps · Mood · Workout log</div>', unsafe_allow_html=True)
 
-st.page_link("app.py", label="🏠 Back to Home", use_container_width=False)
+pg = st.navigation([
+    st.Page("app.py", title="Home"),
+    st.Page("pages/home.py", title="Dashboard")
+])
+pg.run()
 
 # ============================================================
 # COUNTDOWN — TRAVEL DATE

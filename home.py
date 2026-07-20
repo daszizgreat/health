@@ -214,20 +214,9 @@ if not df.empty:
 st.markdown('<div class="dash-title">📊 Fitness Dashboard</div>', unsafe_allow_html=True)
 st.markdown('<div class="dash-sub">Weight · Sleep · Steps · Mood · Workout log</div>', unsafe_allow_html=True)
 
-if "page" not in st.session_state:
-    st.session_state.page = "home"
 
-if st.session_state.page == "home":
-    # Home screen
-    if st.button("Go to Dashboard"):
-        st.session_state.page = "dashboard"
-        st.rerun()
-
-elif st.session_state.page == "dashboard":
-    # Dashboard screen
-    if st.button("🏠 Back to Home"):
-        st.session_state.page = "home"
-        st.rerun()
+if st.button("🏠 Back to Home"):
+    st.switch_page("app.py")
 
 # ============================================================
 # COUNTDOWN — TRAVEL DATE
